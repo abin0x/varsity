@@ -26,6 +26,7 @@ SECRET_KEY = 'django-insecure-ozo-@!6=v&11hncw1l1#7tq*(+ji43b0h9j07=(nf0zgzbg!gw
 DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
+CSRF_TRUSTED_ORIGINS = ['https://varsity-s41t.onrender.com','http://127.0.0.1:8000/']
 
 AUTH_USER_MODEL = 'users.CustomUser'
 
@@ -49,7 +50,7 @@ LOGIN_URL="http://127.0.0.1:5500/login.html"
 
 CORS_ALLOWED_ORIGINS = [
     'http://127.0.0.1:5500',
-    'http://127.0.0.1:8000',
+    'https://varsity-s41t.onrender.com',
     'http://127.0.0.1:5501',
 ]
 
