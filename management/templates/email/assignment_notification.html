@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ notification.title }}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .card {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            padding: 20px;
+        }
+        h2 {
+            color: #333;
+            margin-top: 0;
+        }
+        p {
+            color: #555;
+            line-height: 1.6;
+            margin: 0;
+        }
+        .section-title {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .details {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: #f9f9f9;
+            margin-bottom: 10px;
+        }
+        .footer {
+            font-size: 12px;
+            color: #777;
+            text-align: center;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h2>{{ notification.title }}</h2>
+            <p>{{ notification.message }}</p>
+            
+            {% if notification.course %}
+                <div class="details">
+                    <p class="section-title">Course Details:</p>
+                    <p><strong>Course Title:</strong> {{ notification.course.title }}</p>
+                    <p><strong>Course Code:</strong> {{ notification.course.course_code }}</p>
+                    
+                    {% if notification.teacher_name %}
+                        <p><strong>Teacher:</strong> {{ notification.teacher_name }}</p>
+                    {% else %}
+                        <p><strong>Teacher:</strong> N/A</p>
+                    {% endif %}
+                </div>
+            {% else %}
+                <div class="details">
+                    <p class="section-title">Course Details:</p>
+                    <p>Course Title: N/A</p>
+                    <p>Course Code: N/A</p>
+                    <p>Teacher: N/A</p>
+                </div>
+            {% endif %}
+            
+            {% if notification.assignment %}
+                <div class="details">
+                    <p class="section-title">Assignment Details:</p>
+                    <p><strong>Assignment Title:</strong> {{ notification.assignment.title }}</p>
+                    <p><strong>Description:</strong> {{ notification.assignment.description }}</p>
+                    <p><strong>Due Date:</strong> {{ notification.assignment.due_date|date:"M. j, Y" }}</p>
+                </div>
+            {% else %}
+                <div class="details">
+                    <p class="section-title">Assignment Details:</p>
+                    <p>Assignment Title: N/A</p>
+                    <p>Due Date: N/A</p>
+                </div>
+            {% endif %}
+            
+            <p><strong>Created at:</strong> {{ notification.created_at|date:"M. j, Y, g:i a" }}</p>
+        </div>
+        
+        <div class="footer">
+            <p>&copy; {{ current_year }} Your Organization. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>

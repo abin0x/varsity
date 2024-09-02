@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ notification.title }}</title>
+</head>
+<body>
+    <h1>{{ notification.title }}</h1>
+    <p>{{ notification.description }}</p>
+    {% if notification.course %}
+        <p><strong>Course:</strong> {{ notification.course.title }} ({{ notification.course.course_code }})</p>
+    {% endif %}
+    <p>Created by: {{ notification.created_by.username }}</p>
+</body>
+</html>

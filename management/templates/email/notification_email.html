@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ notification.title }}</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 600px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+            animation: fadeIn 1s ease-out;
+            border: 1px solid #e0e0e0;
+        }
+
+        .container:hover {
+            transform: scale(1.03);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            background-color: #f9f9f9;
+        }
+
+        h2 {
+            color: #4CAF50;
+            margin-bottom: 15px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin: 0 0 12px;
+            color: #555;
+            transition: color 0.3s ease;
+        }
+
+        p:hover {
+            color: #333;
+        }
+
+        .footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #888;
+            text-align: right;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Message Title: {{ notification.title }}</h2>
+        <p>Message: {{ notification.message }}</p>
+        
+        {% if notification.course %}
+            <p>Course Title: {{ notification.course.title }}</p>
+            <p>Course Code: {{ notification.course.course_code }}</p>
+        {% else %}
+            <p>Course Title: N/A</p>
+            <p>Course Code: N/A</p>
+        {% endif %}
+        
+        {% if notification.teacher_name %}
+            <p>Teacher: {{ notification.teacher_name }}</p>
+        {% else %}
+            <p>Teacher: N/A</p>
+        {% endif %}
+        
+        <p class="footer">Created at: {{ notification.created_at|date:"M. j, Y, g:i a" }}</p>
+    </div>
+</body>
+</html>
