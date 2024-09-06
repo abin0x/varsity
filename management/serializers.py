@@ -30,13 +30,20 @@ class EnrollmentSerializer(serializers.ModelSerializer):
 
         return attrs
 
+# class AssignmentSerializer(serializers.ModelSerializer):
+#     course = CourseSerializer()
+#     class Meta:
+#         model = Assignment
+#         fields = ['id', 'title', 'description', 'due_date', 'course']
+#         # fields = ['id', 'title', 'description', 'due_date', 'course', 'for_students']
+
 class AssignmentSerializer(serializers.ModelSerializer):
-    course = CourseSerializer()
+    # course = CourseSerializer()
+    course = serializers.PrimaryKeyRelatedField(queryset=Course.objects.all())
     class Meta:
         model = Assignment
         fields = ['id', 'title', 'description', 'due_date', 'course']
         # fields = ['id', 'title', 'description', 'due_date', 'course', 'for_students']
-
 
 class NotificationSerializer(serializers.ModelSerializer):
     course_title = serializers.CharField(source='course.title', read_only=True)
