@@ -118,3 +118,27 @@ python manage.py runserver
 ```
 
 <p>11. Open your browser and go to http://127.0.0.1:8000 to access the application</p>
+
+
+
+
+## Model/Schemas
+
+The following models are used in the project:
+
+### User
+- **username**: `CharField`
+- **email**: `EmailField`
+- **password**: `CharField`
+
+### Course
+- **title**: `CharField`
+- **description**: `TextField`
+- **instructor**: `ForeignKey (User)`
+- **created_at**: `DateTimeField`
+
+### Enrollment
+- **student**: `ForeignKey (User)`
+- **course**: `ForeignKey (Course)`
+- **enrolled_at**: `DateTimeField`
+
