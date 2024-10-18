@@ -4,6 +4,8 @@
 
 Our platform streamlines university management with dedicated dashboards for **Teachers**, **Students**, and **Class Representatives (CRs)**. 
 
+<p align="center"><img src="https://i.ibb.co.com/qMhcXzP/all-devices-black.png" alt="project-image"></p>
+
 ---
 
 ## 🚀 Features
