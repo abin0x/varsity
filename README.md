@@ -33,6 +33,29 @@ Experience the system live at [https://hstu.netlify.app/](https://hstu.netlify.a
 
 ---
 
+## API Endpoints
+
+- **Filter**: [`http://127.0.0.1:8000/api/courses?department=eee`](http://127.0.0.1:8000/api/courses?department=eee)
+- **Teacher Login**: [`http://127.0.0.1:8000/api/users/login`](http://127.0.0.1:8000/api/users/login)
+- **Individual Course Details**: [`http://127.0.0.1:8000/api/courses/4`](http://127.0.0.1:8000/api/courses/4)
+- **Teacher Logout**: [`http://127.0.0.1:8000/api/users/logout`](http://127.0.0.1:8000/api/users/logout)
+- **All Courses**: [`http://127.0.0.1:8000/api/courses`](http://127.0.0.1:8000/api/courses)
+- **Teacher Registration**: [`http://127.0.0.1:8000/api/users/register`](http://127.0.0.1:8000/api/users/register)
+- **Activate Account**: [`http://127.0.0.1:8000/api/users/activate/<uid64>/<token>/`](http://127.0.0.1:8000/api/users/activate/<uid64>/<token>/)
+- **Service**: [`http://127.0.0.1:8000/api/services/`](http://127.0.0.1:8000/api/services/)
+- **Contact Us**: [`http://127.0.0.1:8000/api/contact/`](http://127.0.0.1:8000/api/contact/)
+- **Blog**: [`http://127.0.0.1:8000/api/posts/`](http://127.0.0.1:8000/api/posts/)
+- **Blog Details**: [`http://127.0.0.1:8000/api/posts/13`](http://127.0.0.1:8000/api/posts/13)
+- **All Teachers**: [`http://127.0.0.1:8000/api/users`](http://127.0.0.1:8000/api/users)
+- **Individual Teacher Details**: [`http://127.0.0.1:8000/api/users/29`](http://127.0.0.1:8000/api/users/29)
+- **Review**: [`http://127.0.0.1:8000/api/reviews`](http://127.0.0.1:8000/api/reviews)
+- **Individual Review**: [`http://127.0.0.1:8000/api/reviews/1`](http://127.0.0.1:8000/api/reviews/1)
+- **Enroll**: [`http://127.0.0.1:8000/api/enroll/`](http://127.0.0.1:8000/api/enroll/)
+- **History**: [`http://127.0.0.1:8000/api/history/`](http://127.0.0.1:8000/api/history/)
+
+
+
+
 ## 🛠️ Installation
 
 To run this project locally, follow these steps:
