@@ -1,5 +1,9 @@
 # 🌟 University Management System
 
+👤 **Name:** Mahmudul Hasan Abin  
+📚 **Project Name:** University Management System
+# 🌟 University Management System
+
 **Introducing the University Class Schedule, Notice, Assignment, Research Paper Submission, and Attendance System!**
 The Online Library Management System is designed to help users and administrators manage a library efficiently. It allows users to borrow books, view their borrowing history, and manage their profiles, while administrators can manage the entire library inventory (books, categories, authors), issue and return books, and track user activities such as borrowed books, fines, and membership statuses. The system is built using Django Rest Framework (DRF) and follows a token-based authentication system.
 Our platform streamlines university management with dedicated dashboards for **Teachers**, **Students**, and **Class Representatives (CRs)**. 
